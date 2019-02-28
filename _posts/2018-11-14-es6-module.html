@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Module"
+subtitle: "ES6"
+date:   2018-11-14 10:45:13 -0400
+background: '/img/posts/06.jpg'
+---
+<div class="MarkdownRender monokai" id="markdown-render"><div><h2 id="module">Module</h2><blockquote>
+        <p>모듈은 구현 세부 사항을 캡슐화하고 공개 API를 노출해 다른 코드에서 쉽게 로드하고 사용할 수 있도록 재사용 가능한 코드 조각이다.<br>ES6에서는 클라이언트 사이드 자바스크립트에서도 동작하는 모듈 기능을 추가하였다.<br>단, 현재 대부분의 브라우저가 ES6의 모듈을 지원하지 않고 있으므로 현재의 브라우저에서 ES6 모듈을 사용하려면 SystemJS, RequireJS 등의 모듈 로더 또는 Webpack 등의 모듈 번들러를 사용하여야 한다.</p>
+        </blockquote>
+        <h3 id="export">export</h3><h6 id="각자-export">각자 export</h6><pre><code>// test.js
+        
+        export const x = 100;
+        export function hello(name){
+            return `Hello, ${name}`;
+        }
+        export class Person{
+            constructor(job){
+                this.job = job;
+            }
+        }</code></pre><h6 id="한번에-export">한번에 export</h6><pre><code>//test.js
+        
+        const x = 100;
+        function hello(name){
+            return `Hello, ${name}`;
+        }
+        class Person{
+            constructor(job){
+                this.job = job;
+            }
+        }
+        
+        export {x, hello, Person};</code></pre><h3 id="import">import</h3><h6 id="각자-import">각자 import</h6><pre><code>// main.js (test.js와 같은 폴더 내에 있다고 가정)
+        
+        import {x, hello, Person} from './test' //export한 이름으로 import한다.
+        
+        console.log(x); //100
+        console.log(hello('dev')); //Hello, dev
+        console.log(new Person('dev')); //Person {job: "dev"}</code></pre><h6 id="한번에-export">한번에 export</h6><pre><code>// main.js (test.js와 같은 폴더 내에 있다고 가정)
+        
+        import * as test from './test'
+        
+        console.log(test.x); //100
+        console.log(test.hello('dev')); //Hello, dev
+        console.log(new test.Person('dev')); //Person {job: "dev"}</code></pre></div></div>

@@ -1,0 +1,91 @@
+---
+layout: post
+title:  "Sass"
+subtitle: "css"
+date:   2019-01-29 10:45:13 -0400
+background: '/img/posts/06.jpg'
+---
+<div class="MarkdownRender github" id="markdown-render"><div><h2 id="sass란">Sass란</h2><blockquote>
+        <p>Sass는 일종의 CSS 전처리기이다. 자바스크립트처럼 특정 속성의 값을 변수로 선언하여 필요한 곳에 선언된 변수를 적용할 수도 있고, 코드의 재사용성을 높여준다.</p>
+        </blockquote>
+        <h2 id="sass설치">Sass설치</h2><blockquote>
+        <ol>
+        <li>ruby설치<br>윈도우만 아래 링크에서 ruby설치(mac과 linux는 ruby 기본적으로 설치되어있음)<br><a target="_blank" href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a></li>
+        <li>cmd창에서 ruby 버전확인<pre><code>ruby --version</code></pre></li>
+        <li>명령어로 sass 설치<pre><code>gem install sass</code></pre></li>
+        </ol>
+        </blockquote>
+        <h2 id="sass사용예시">Sass사용예시</h2><blockquote>
+        <h3 id="variables">variables</h3><p>선언: $변수명: 속성값;<br>호출: $변수명</p>
+        <pre><code>// Sass
+        $default-color: #f00;
+        $default-border: 1px solid black;
+        .head{
+            color: $default-color;
+            border: $default-border;
+        }
+        .body{
+            color: blue;
+            border: $default-border;
+        }</code></pre><pre><code>// CSS
+        .head{
+            color: #f00;
+            border: 1px solid black;
+        }
+        .body{
+            color: blue;
+            border: 1px solid black;
+        }</code></pre></blockquote>
+        <blockquote>
+        <h3 id="nesting">nesting</h3><p>한번에 관리하므로 코드의 유지보수가 편하다.<br>&amp;로 부모선택자를 참조할 수 있다.</p>
+        <pre><code>// Sass
+        .btn{
+            background-color: #f00;
+            &amp;:hover{
+                opacity: 0.5;
+            }
+            .text{
+                color: #fff;
+            }
+            &amp;.select{
+                border: 2px solid black;
+            }
+        }</code></pre><pre><code>// CSS
+        .btn{
+            background-color: #f00;
+        }
+        .btn:hover{
+            opacity: 0.5;
+        }
+        .btn .text{
+            color: #fff;
+        }
+        .btn.select{
+            border: 2px solid black;
+        }</code></pre></blockquote>
+        <blockquote>
+        <h3 id="import">import</h3><p>호출: @import ".scss 파일명"</p>
+        <pre><code>@import "basic.scss"
+        @import "basic2" //확장자 생략가능</code></pre></blockquote>
+        <blockquote>
+        <h3 id="mixin">mixin</h3><p>선언: @mixin mixin명(인자){}<br>호출: @include mixin명(인수)</p>
+        <pre><code>@mixin btn-style($color, $width, $height){
+            background-color: $color;
+            width: $width;
+            height: $height;
+        }
+        blue-btn{
+            @include box-style(#00f, 100px, 50px);
+            color: #f00;
+        }</code></pre></blockquote>
+        <blockquote>
+        <h3 id="extend">extend</h3><p>호출: @extend 선택자명</p>
+        <pre><code>.btn-style{
+            width: 100px;
+            height: 50px;
+        }
+        .blue-btn{
+            @extend .btn-style;
+            background-color: #00f;
+        }</code></pre></blockquote>
+        </div></div>
