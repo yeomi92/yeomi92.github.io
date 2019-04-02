@@ -3,10 +3,9 @@ layout: page
 title: Posts
 background: '/img/bg-post.jpg'
 ---
-
+<div class="post_list">
 {% for post in paginator.posts %}
-
-<article class="post-preview">
+<!-- <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
     {% if post.subtitle %}
@@ -21,13 +20,21 @@ background: '/img/bg-post.jpg'
     {% else %}
     {{ site.author }}
     {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</p>
+    on {{ post.date | date: '%Y-%m-%d' }}</p>
+</article> -->
+<article class="post_preview">
+  <div class="div_post">
+    <div class="post_info">
+      <div class="post_date">{{ post.date | date: '%Y-%m-%d' }}</div>
+      <div class="post_title">[{{post.subtitle}}] {{ post.title }}</div>
+    </div>
+    <div class="btn_read_post"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+      <span>read post</span>
+    </a></div>
+</div>
 </article>
-
-<hr>
-
 {% endfor %}
-
+</div>
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
 
