@@ -6,9 +6,9 @@ baseurl:           "/"
 url:               "http://yeomi92.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
+#twitter_username:  SBootstrap
 github_username:   yeomi92
-facebook_username: StartBootstrap
+#facebook_username: StartBootstrap
 
 # Build settings
 markdown:          kramdown

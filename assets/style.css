@@ -3,12 +3,12 @@
   .post_list .post_preview {
     border-bottom: 2px solid #8080804d;
     padding: 20px 10px; }
-    .post_list .post_preview:hover {
-      background: #0085a112; }
-      .post_list .post_preview:hover a {
-        color: white !important;
-        background-color: #0085A1; }
+    .post_list .post_preview:hover .btn_read_post {
+      background-color: #0085A1; }
+      .post_list .post_preview:hover .btn_read_post span {
+        color: white !important; }
     .post_list .post_preview .div_post {
+      position: relative;
       display: flex;
       justify-content: space-between; }
       .post_list .post_preview .div_post .post_info > div {
@@ -21,19 +21,39 @@
         font-size: 25px;
         font-weight: bold;
         color: #0085A1; }
+      .post_list .post_preview .div_post .post_info .post_excerpt {
+        width: 75%; }
       .post_list .post_preview .div_post .btn_read_post {
-        display: flex;
-        margin-top: 37px;
-        padding-bottom: 5px; }
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 40px;
+        border: 3px solid #0085A1;
+        cursor: pointer; }
         .post_list .post_preview .div_post .btn_read_post a {
           padding: 0px 10px;
-          border: 3px solid #0085A1;
-          text-decoration: none;
-          color: #0085A1; }
+          text-decoration: none; }
           .post_list .post_preview .div_post .btn_read_post a span {
-            vertical-align: text-bottom; }
-          .post_list .post_preview .div_post .btn_read_post a:hover {
-            color: white;
-            background-color: #0085A1; }
+            color: #0085A1;
+            font-size: 16px;
+            font-weight: bold; }
+        .post_list .post_preview .div_post .btn_read_post:hover {
+          color: white;
+          background-color: #0085A1; }
+
+.btn_arrow {
+  font-size: 20px; }
+  .btn_arrow:focus {
+    outline: none;
+    box-shadow: none; }
+
+.btn_index {
+  display: flex;
+  justify-content: center; }
+  .btn_index a {
+    background: black;
+    color: white !important; }
+    .btn_index a:hover {
+      opacity: 0.8; }
 
 /*# sourceMappingURL=style.css.map */

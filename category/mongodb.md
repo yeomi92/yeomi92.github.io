@@ -1,5 +1,6 @@
 ---
 layout: posts
-title: Posts
+title: MongoDB
 background: '/img/bg-post.jpg'
+category: mongodb
 ---

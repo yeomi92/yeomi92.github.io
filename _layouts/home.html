@@ -37,16 +37,15 @@ layout: default
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <div class="post-title">{{ post.title }}</div>
             <div class="post-subtitle">{{ post.subtitle }}</div>
-            {% if post.hashtag %}
+            <!-- {% if post.hashtag %}
             <div class="post-hashtag">
             {% for tag in post.hashtag %}
             <div class="tag">{{tag}}</div>
             {% endfor %}
             </div>
-            {% endif %}
+            {% endif %} -->
           </a>
-          <p class="post-meta">Posted by
-            on
+          <p class="post-meta">
             {{ post.date | date: '%Y-%m-%d' }}</p>
         </article>
 

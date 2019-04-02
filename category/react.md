@@ -1,5 +1,6 @@
 ---
 layout: posts
-title: Posts
+title: React.js
 background: '/img/bg-post.jpg'
+category: react
 ---

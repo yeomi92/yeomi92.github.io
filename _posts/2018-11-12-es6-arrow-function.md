@@ -4,6 +4,7 @@ title: "Arrow Function"
 subtitle: "ES6"
 date: 2018-11-12 10:45:13 -0400
 background: "/img/posts/06.jpg"
+category: "javascript"
 ---
 ## Arrow function
 > 익명함수를 화살표 형태로 간략하게 쓸 수 있는 방법

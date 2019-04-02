@@ -1,5 +1,6 @@
 ---
 layout: posts
-title: Posts
+title: CSS
 background: '/img/bg-post.jpg'
+category: css
 ---

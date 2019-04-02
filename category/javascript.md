@@ -1,5 +1,6 @@
 ---
 layout: posts
-title: Posts
+title: Javascript
 background: '/img/bg-post.jpg'
+category: javascript
 ---

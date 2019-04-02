@@ -4,6 +4,7 @@ title: "Template String"
 subtitle: "ES6"
 date: 2018-11-13 10:45:13 -0400
 background: "/img/posts/06.jpg"
+category: "javascript"
 ---
 
 ## Template String
