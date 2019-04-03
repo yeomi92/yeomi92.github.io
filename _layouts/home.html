@@ -30,28 +30,22 @@ layout: default
 
         {{ content }}
 
-        <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
-
-        <article class="post-preview">
-          <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-            <div class="post-title">{{ post.title }}</div>
-            <div class="post-subtitle">{{ post.subtitle }}</div>
-            <!-- {% if post.hashtag %}
-            <div class="post-hashtag">
-            {% for tag in post.hashtag %}
-            <div class="tag">{{tag}}</div>
-            {% endfor %}
+        <div class="post_list">
+            {% for post in site.posts limit:5 %}
+            <article class="post_preview">
+              <div class="div_post">
+                <div class="post_info">
+                  <div class="post_date">{{ post.date | date: '%Y-%m-%d' }}</div>
+                  <div class="post_title">[{{post.subtitle}}] {{ post.title }}</div>
+                  <div class="post_excerpt">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
+                </div>
+                <div class="btn_read_post"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                  <span>READ POST</span>
+                </a></div>
             </div>
-            {% endif %} -->
-          </a>
-          <p class="post-meta">
-            {{ post.date | date: '%Y-%m-%d' }}</p>
-        </article>
-
-        <hr>
-
-        {% endfor %}
+            </article>
+            {% endfor %}
+          </div>
 
         <!-- Pager -->
         <div class="clearfix">

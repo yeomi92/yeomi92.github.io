@@ -29,9 +29,8 @@ comments: true
     <div class="col-lg-8 col-md-10 mx-auto">
 
         <div class="post_list">
-            {% for post in site.posts limit : 5 %}
-
-          <!-- {% if post.category === page.category %} -->
+          {% for post in site.posts %}
+          {% if post.category == page.category %}
           <article class="post_preview">
             <div class="div_post">
               <div class="post_info">
@@ -44,7 +43,7 @@ comments: true
               </a></div>
           </div>
           </article>
-          <!-- {% endif %} -->
+          {% endif %}
           {% endfor %}
         </div>
         <!-- Pager -->

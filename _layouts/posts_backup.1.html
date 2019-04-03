@@ -1,0 +1,71 @@
+---
+layout: default 
+comments: true
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+{% else %}
+<header class="masthead">
+{% endif %}
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>{{ page.title }}</h1>
+          {% if page.description %}
+            <span class="subheading">{{ page.description }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+
+        <div class="post_list">
+          {% for post in site.posts limit : 5 %}
+          {% if post.category %}
+          {% if post.category == page.category %}
+          <article class="post_preview">
+            <div class="div_post">
+              <div class="post_info">
+                <div class="post_date">{{ post.date | date: '%Y-%m-%d' }}</div>
+                <div class="post_title">[{{post.subtitle}}] {{ post.title }}</div>
+                <div class="post_excerpt">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
+              </div>
+              <div class="btn_read_post"><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+                <span>READ POST</span>
+              </a></div>
+          </div>
+          </article>
+          {% endif %}
+          {% endif %}
+          {% endfor %}
+        </div>
+        <!-- Pager -->
+        {% if paginator.total_pages > 1 %}
+        
+        <div class="clearfix">
+        
+          {% if paginator.previous_page %}
+          <a class="btn float-left btn_arrow" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+            Previous</a>
+          {% endif %}
+        
+          {% if paginator.next_page %}
+          <a class="btn float-right btn_arrow" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>
+          {% endif %}
+        
+        </div>
+        
+        {% endif %}
+
+    </div>
+  </div>
+</div>
