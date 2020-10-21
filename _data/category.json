@@ -24,6 +24,11 @@
         "name": "CSS",
         "value": "css",
         "url": "posts/css"
+    },
+    {
+        "name": "GIT",
+        "value": "git",
+        "url": "posts/git"
     }
     
 ]

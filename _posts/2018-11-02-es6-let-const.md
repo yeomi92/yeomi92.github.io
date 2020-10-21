@@ -2,7 +2,7 @@
 layout: post
 title: "let,cont"
 subtitle: "ES6"
-date: 2018-11-02 10:45:13 -0400
+date: 2018-11-02 -0400
 background: "/img/posts/06.jpg"
 category: "javascript"
 ---

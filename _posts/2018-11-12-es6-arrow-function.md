@@ -2,7 +2,7 @@
 layout: post
 title: "Arrow Function"
 subtitle: "ES6"
-date: 2018-11-12 10:45:13 -0400
+date: 2018-11-12 -0400
 background: "/img/posts/06.jpg"
 category: "javascript"
 ---
